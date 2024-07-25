@@ -6,7 +6,10 @@ class Note
     {
         $this->id = $id;
     }
+}
 
+class WriteNote extends Note
+{
     public function save($text)
     {
         //saving process
@@ -15,11 +18,7 @@ class Note
 
 class ReadOnlyNote extends Note
 {
-    public function save($text)
-    {
-        throw new Error("Can't save or update");
-    }
 }
 
-$note = new ReadOnlyNote(1);
+$note = new WriteNote(1);
 $note->save("Saving note");
