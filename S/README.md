@@ -1,4 +1,4 @@
-# Description of 'S' in Solid
+# Description of 'S' in SOLID
 
 ## Single-Responsibility Principle
 
@@ -9,11 +9,11 @@ Single-responsibility Principle (SRP) states:
 - Example
 
   The file `OrderManagerF.php` contains one class that must perform several tasks:
-  
+
 - Converting to JSON
   - Processing the payment
 - Sending an email
-  
+
 ```php
   <?php
 
@@ -23,23 +23,23 @@ Single-responsibility Principle (SRP) states:
     {
           // This function manages orders
     }
-      
+
     public function toJson()
       {
         // This function converts the order to JSON
       }
-    
+
       public function paymentWithCash()
     {
           // This function processes the payment with cash
     }
-      
+
     public function sendEmail()
       {
         // This function sends an email
       }
 }
-  
+
 ```
 
 However, to adhere to the SRP, you should create separate classes for each task, as shown in the code below:
