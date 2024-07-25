@@ -8,10 +8,10 @@ Single-responsibility Principle (SRP) states:
 
 - Example
 
-  The file `OrderManagerF.php` contains one class that must perform several tasks:
+  The file `False.php` contains one class that must perform several tasks:
 
 - Converting to JSON
-  - Processing the payment
+- Processing the payment
 - Sending an email
 
 ```php
@@ -42,7 +42,7 @@ Single-responsibility Principle (SRP) states:
 
 ```
 
-However, to adhere to the SRP, you should create separate classes for each task, as shown in the code below:
+However, to adhere to the SRP, you should create separate classes for each task, as shown in the code below like `True.php`:
 
 ```php
 <?php
